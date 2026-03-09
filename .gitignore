@@ -3,4 +3,5 @@ data/
 env
 checkpoints
 results/
+logs/
 llmdocs
