@@ -1,0 +1,155 @@
+========================================
+Job: fn_Informer_ETTm2_96
+Model: Informer
+Dataset: ETTm2
+Pred len: 96
+Time limit: 8:00:00
+GPU: h100_2g.20gb:1
+Started: Mon 09 Mar 2026 06:13:58 PM EDT
+========================================
+Mon Mar  9 18:13:58 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          Off |   00000000:4E:00.0 Off |                   On |
+| N/A   43C    P0            133W /  700W |     734MiB /  81559MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    3   0   0  |              17MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |
+|                  |                 0MiB / 32767MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Using device: cuda:0
+Model: Informer, Dataset: ETTm2, pred_len: 96, seq_len: 96
+
+>>> Training...
+train 34369
+val 11425
+Model Model : total params: 11,329,031 | trainable: 11,329,031 (43.2168MB)
+	iters: 100, epoch: 1 | loss: 0.2794600
+	speed: 0.0399s/iter; left time: 425.0804s
+	iters: 200, epoch: 1 | loss: 0.3453003
+	speed: 0.0360s/iter; left time: 379.6247s
+	iters: 300, epoch: 1 | loss: 0.1267864
+	speed: 0.0347s/iter; left time: 362.1668s
+	iters: 400, epoch: 1 | loss: 0.1446269
+	speed: 0.0341s/iter; left time: 352.3352s
+	iters: 500, epoch: 1 | loss: 0.1820448
+	speed: 0.0337s/iter; left time: 344.9382s
+	iters: 600, epoch: 1 | loss: 0.1615469
+	speed: 0.0334s/iter; left time: 338.9584s
+	iters: 700, epoch: 1 | loss: 0.2156920
+	speed: 0.0332s/iter; left time: 333.6386s
+	iters: 800, epoch: 1 | loss: 0.1672816
+	speed: 0.0331s/iter; left time: 329.1117s
+	iters: 900, epoch: 1 | loss: 0.1661350
+	speed: 0.0330s/iter; left time: 324.7253s
+	iters: 1000, epoch: 1 | loss: 0.1648619
+	speed: 0.0329s/iter; left time: 320.5014s
+Epoch: 1 cost time: 35.3s
+Epoch: 1, Steps: 1074 | Train Loss: 0.2254151 Vali Loss: 0.2564012
+Validation loss decreased (inf --> 0.256401).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.1385518
+	speed: 0.0320s/iter; left time: 306.4989s
+	iters: 200, epoch: 2 | loss: 0.1705969
+	speed: 0.0321s/iter; left time: 303.9044s
+	iters: 300, epoch: 2 | loss: 0.2115432
+	speed: 0.0321s/iter; left time: 300.9234s
+	iters: 400, epoch: 2 | loss: 0.1309169
+	speed: 0.0321s/iter; left time: 297.5500s
+	iters: 500, epoch: 2 | loss: 0.1819511
+	speed: 0.0321s/iter; left time: 294.2983s
+	iters: 600, epoch: 2 | loss: 0.1039615
+	speed: 0.0321s/iter; left time: 291.3167s
+	iters: 700, epoch: 2 | loss: 0.1233115
+	speed: 0.0321s/iter; left time: 288.0922s
+	iters: 800, epoch: 2 | loss: 0.1469001
+	speed: 0.0321s/iter; left time: 284.7987s
+	iters: 900, epoch: 2 | loss: 0.2196669
+	speed: 0.0321s/iter; left time: 281.6377s
+	iters: 1000, epoch: 2 | loss: 0.1093256
+	speed: 0.0321s/iter; left time: 278.4416s
+Epoch: 2 cost time: 34.5s
+Epoch: 2, Steps: 1074 | Train Loss: 0.1621882 Vali Loss: 0.3187585
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.1185853
+	speed: 0.0321s/iter; left time: 272.7938s
+	iters: 200, epoch: 3 | loss: 0.0882216
+	speed: 0.0322s/iter; left time: 269.8895s
+	iters: 300, epoch: 3 | loss: 0.1217091
+	speed: 0.0321s/iter; left time: 266.5726s
+	iters: 400, epoch: 3 | loss: 0.1156004
+	speed: 0.0322s/iter; left time: 263.4856s
+	iters: 500, epoch: 3 | loss: 0.1167357
+	speed: 0.0321s/iter; left time: 260.1586s
+	iters: 600, epoch: 3 | loss: 0.1073902
+	speed: 0.0322s/iter; left time: 256.9944s
+	iters: 700, epoch: 3 | loss: 0.1307360
+	speed: 0.0321s/iter; left time: 253.7043s
+	iters: 800, epoch: 3 | loss: 0.1265284
+	speed: 0.0322s/iter; left time: 250.6101s
+	iters: 900, epoch: 3 | loss: 0.1025389
+	speed: 0.0322s/iter; left time: 247.4948s
+	iters: 1000, epoch: 3 | loss: 0.1235811
+	speed: 0.0322s/iter; left time: 244.2133s
+Epoch: 3 cost time: 34.6s
+Epoch: 3, Steps: 1074 | Train Loss: 0.1291490 Vali Loss: 0.5152013
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.1022557
+	speed: 0.0320s/iter; left time: 237.2888s
+	iters: 200, epoch: 4 | loss: 0.1271535
+	speed: 0.0321s/iter; left time: 234.6052s
+	iters: 300, epoch: 4 | loss: 0.1304259
+	speed: 0.0320s/iter; left time: 230.8622s
+	iters: 400, epoch: 4 | loss: 0.1527287
+	speed: 0.0319s/iter; left time: 227.2990s
+	iters: 500, epoch: 4 | loss: 0.1410006
+	speed: 0.0319s/iter; left time: 224.1747s
+	iters: 600, epoch: 4 | loss: 0.0829068
+	speed: 0.0320s/iter; left time: 221.1526s
+	iters: 700, epoch: 4 | loss: 0.1048643
+	speed: 0.0319s/iter; left time: 217.6515s
+	iters: 800, epoch: 4 | loss: 0.0742441
+	speed: 0.0319s/iter; left time: 214.1688s
+	iters: 900, epoch: 4 | loss: 0.0859860
+	speed: 0.0318s/iter; left time: 210.8041s
+	iters: 1000, epoch: 4 | loss: 0.1260552
+	speed: 0.0318s/iter; left time: 207.4907s
+Epoch: 4 cost time: 34.2s
+Epoch: 4, Steps: 1074 | Train Loss: 0.1101111 Vali Loss: 0.5106645
+EarlyStopping counter: 3 out of 3
+Early stopping
+Training time: 160.0s | Peak GPU memory: 830.1MB
+
+>>> Testing...
+test 11425
+test shape: (11425, 1, 96, 7) (11425, 1, 96, 7)
+test shape: (11425, 96, 7) (11425, 96, 7)
+MSE: 0.359625, MAE: 0.453697
+Inference: 46.15s | 11425 samples | 247.6 samples/sec
+Results saved to /lustre09/project/6010289/sdmuhsin/SpectraGate/results/ettm2_results.csv
+========================================
+Finished: Mon 09 Mar 2026 06:17:29 PM EDT
+========================================

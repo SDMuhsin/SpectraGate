@@ -212,6 +212,37 @@ EXCHANGE_DEFAULTS = {
         dropout=0.1, cut_freq=12, d_model=64, d_ff=24,
         e_layers=1, d_layers=0, lradj='cosine',
     ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=32, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
+    ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
         learning_rate=0.001, train_epochs=10, patience=3, dropout=0,
@@ -274,18 +305,45 @@ ECL_DEFAULTS = {
         dropout=0.1, cut_freq=24, d_model=192, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
     ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'iTransformer': dict(
+        batch_size=16, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
+    ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
         learning_rate=0.001, train_epochs=10, patience=3, dropout=0,
         channel_independence=0,
     ),
     'Autoformer': dict(
-        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
         dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
         d_ff=2048, moving_avg=25, factor=3,
     ),
     'Informer': dict(
-        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
         dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
         d_ff=2048, factor=5,
     ),
@@ -318,6 +376,37 @@ ETTH1_DEFAULTS = {
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
+    ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=32, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -363,6 +452,37 @@ ETTH2_DEFAULTS = {
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
+    ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=32, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -424,6 +544,37 @@ ETTM1_DEFAULTS = {
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
     ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=32, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
+    ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
         learning_rate=0.001, train_epochs=10, patience=3, dropout=0,
@@ -475,6 +626,37 @@ ETTM2_DEFAULTS = {
         dropout=0.1, cut_freq=20, d_model=96, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
     ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=32, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=32, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
+    ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
         learning_rate=0.001, train_epochs=10, patience=3, dropout=0,
@@ -519,6 +701,37 @@ TRAFFIC_DEFAULTS = {
         batch_size=8, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=24, d_model=192, d_ff=64,
         e_layers=1, d_layers=0, lradj='cosine',
+    ),
+    'DLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, moving_avg=25, individual=False,
+    ),
+    'RLinear': dict(
+        batch_size=32, learning_rate=0.005, train_epochs=20, patience=6,
+        dropout=0, individual=False, rev=True,
+    ),
+    'FITS': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
+        dropout=0, cut_freq=24, individual=True,
+    ),
+    'iTransformer': dict(
+        batch_size=16, learning_rate=0.0005, train_epochs=10, patience=3,
+        dropout=0.1, d_model=512, n_heads=8, e_layers=3, d_ff=512,
+    ),
+    'PatchTST': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=20, patience=5,
+        dropout=0.2, d_model=512, n_heads=16, e_layers=3, d_ff=512,
+        patch_len=16, stride=8,
+    ),
+    'FEDformer': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.05, d_model=512, n_heads=8, e_layers=2, d_layers=1,
+        d_ff=2048, moving_avg=25,
+    ),
+    'TimesNet': dict(
+        batch_size=16, learning_rate=0.0001, train_epochs=10, patience=3,
+        dropout=0.1, d_model=32, d_ff=32, e_layers=2,
+        top_k=5, num_kernels=6,
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=16,

@@ -1,0 +1,89 @@
+========================================
+Job: fn_Informer_Exchange_96
+Model: Informer
+Dataset: Exchange
+Pred len: 96
+Time limit: 4:00:00
+GPU: h100_2g.20gb:1
+Started: Mon 09 Mar 2026 06:13:55 PM EDT
+========================================
+Mon Mar  9 18:13:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          Off |   00000000:DB:00.0 Off |                   On |
+| N/A   47C    P0            162W /  700W |    2278MiB /  81559MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    3   0   0  |              17MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |
+|                  |                 0MiB / 32767MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Using device: cuda:0
+Model: Informer, Dataset: Exchange, pred_len: 96, seq_len: 96
+
+>>> Training...
+train 5120
+val 665
+Model Model : total params: 11,330,568 | trainable: 11,330,568 (43.2227MB)
+	iters: 100, epoch: 1 | loss: 0.1639985
+	speed: 0.0376s/iter; left time: 56.4742s
+Epoch: 1 cost time: 5.8s
+Epoch: 1, Steps: 160 | Train Loss: 0.1716611 Vali Loss: 1.1426518
+Validation loss decreased (inf --> 1.142652).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0656759
+	speed: 0.0328s/iter; left time: 43.9738s
+Epoch: 2 cost time: 5.3s
+Epoch: 2, Steps: 160 | Train Loss: 0.0789113 Vali Loss: 0.9894506
+Validation loss decreased (1.142652 --> 0.989451).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0474505
+	speed: 0.0328s/iter; left time: 38.7725s
+Epoch: 3 cost time: 5.3s
+Epoch: 3, Steps: 160 | Train Loss: 0.0553861 Vali Loss: 1.0097101
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0520280
+	speed: 0.0327s/iter; left time: 33.4322s
+Epoch: 4 cost time: 5.3s
+Epoch: 4, Steps: 160 | Train Loss: 0.0463865 Vali Loss: 1.0269327
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.0410769
+	speed: 0.0328s/iter; left time: 28.2394s
+Epoch: 5 cost time: 5.3s
+Epoch: 5, Steps: 160 | Train Loss: 0.0422612 Vali Loss: 1.0343299
+EarlyStopping counter: 3 out of 3
+Early stopping
+Training time: 28.6s | Peak GPU memory: 830.2MB
+
+>>> Testing...
+test 1422
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+MSE: 1.016302, MAE: 0.802890
+Inference: 5.95s | 1422 samples | 239.1 samples/sec
+Results saved to /lustre09/project/6010289/sdmuhsin/SpectraGate/results/exchange_results.csv
+========================================
+Finished: Mon 09 Mar 2026 06:14:35 PM EDT
+========================================

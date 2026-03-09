@@ -1,0 +1,199 @@
+========================================
+Job: fn_MICN_ECL_96
+Model: MICN
+Dataset: ECL
+Pred len: 96
+Time limit: 12:00:00
+GPU: h100_3g.40gb:1
+Started: Mon 09 Mar 2026 06:12:27 PM EDT
+========================================
+Mon Mar  9 18:12:27 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          Off |   00000000:CB:00.0 Off |                   On |
+| N/A   31C    P0             70W /  700W |      59MiB /  81559MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |              26MiB / 40448MiB    | 60      0 |  3   0    3    0    3 |
+|                  |                 0MiB / 65535MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Using device: cuda:0
+Model: MICN, Dataset: ECL, pred_len: 96, seq_len: 96
+
+>>> Training...
+train 18221
+val 2537
+Model Model : total params: 25,844,129 | trainable: 25,844,129 (98.5875MB)
+	iters: 100, epoch: 1 | loss: 0.3141118
+	speed: 0.0248s/iter; left time: 138.9201s
+	iters: 200, epoch: 1 | loss: 0.2953234
+	speed: 0.0224s/iter; left time: 122.9422s
+	iters: 300, epoch: 1 | loss: 0.2672741
+	speed: 0.0216s/iter; left time: 116.6248s
+	iters: 400, epoch: 1 | loss: 0.2634525
+	speed: 0.0213s/iter; left time: 112.4547s
+	iters: 500, epoch: 1 | loss: 0.2432360
+	speed: 0.0210s/iter; left time: 109.0831s
+Epoch: 1 cost time: 11.9s
+Epoch: 1, Steps: 569 | Train Loss: 0.2986042 Vali Loss: 0.2173229
+Validation loss decreased (inf --> 0.217323).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.2468680
+	speed: 0.0204s/iter; left time: 102.5797s
+	iters: 200, epoch: 2 | loss: 0.2379857
+	speed: 0.0204s/iter; left time: 100.1834s
+	iters: 300, epoch: 2 | loss: 0.2274972
+	speed: 0.0203s/iter; left time: 97.7589s
+	iters: 400, epoch: 2 | loss: 0.2478570
+	speed: 0.0203s/iter; left time: 95.7058s
+	iters: 500, epoch: 2 | loss: 0.2333660
+	speed: 0.0203s/iter; left time: 93.7391s
+Epoch: 2 cost time: 11.5s
+Epoch: 2, Steps: 569 | Train Loss: 0.2334993 Vali Loss: 0.2051179
+Validation loss decreased (0.217323 --> 0.205118).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.2279815
+	speed: 0.0202s/iter; left time: 89.7745s
+	iters: 200, epoch: 3 | loss: 0.2223511
+	speed: 0.0202s/iter; left time: 87.9021s
+	iters: 300, epoch: 3 | loss: 0.2301311
+	speed: 0.0202s/iter; left time: 85.8735s
+	iters: 400, epoch: 3 | loss: 0.2098788
+	speed: 0.0202s/iter; left time: 83.8883s
+	iters: 500, epoch: 3 | loss: 0.2316399
+	speed: 0.0202s/iter; left time: 81.9862s
+Epoch: 3 cost time: 11.5s
+Epoch: 3, Steps: 569 | Train Loss: 0.2263279 Vali Loss: 0.2022919
+Validation loss decreased (0.205118 --> 0.202292).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.2036611
+	speed: 0.0204s/iter; left time: 79.3556s
+	iters: 200, epoch: 4 | loss: 0.2456277
+	speed: 0.0204s/iter; left time: 77.0871s
+	iters: 300, epoch: 4 | loss: 0.2045254
+	speed: 0.0204s/iter; left time: 75.0694s
+	iters: 400, epoch: 4 | loss: 0.2147773
+	speed: 0.0203s/iter; left time: 72.8720s
+	iters: 500, epoch: 4 | loss: 0.2120124
+	speed: 0.0203s/iter; left time: 70.7388s
+Epoch: 4 cost time: 11.5s
+Epoch: 4, Steps: 569 | Train Loss: 0.2239986 Vali Loss: 0.2006424
+Validation loss decreased (0.202292 --> 0.200642).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.2302607
+	speed: 0.0203s/iter; left time: 67.2513s
+	iters: 200, epoch: 5 | loss: 0.2274310
+	speed: 0.0202s/iter; left time: 64.9118s
+	iters: 300, epoch: 5 | loss: 0.2279222
+	speed: 0.0202s/iter; left time: 62.9045s
+	iters: 400, epoch: 5 | loss: 0.2612907
+	speed: 0.0202s/iter; left time: 60.9099s
+	iters: 500, epoch: 5 | loss: 0.2232366
+	speed: 0.0202s/iter; left time: 58.8233s
+Epoch: 5 cost time: 11.5s
+Epoch: 5, Steps: 569 | Train Loss: 0.2228433 Vali Loss: 0.1997761
+Validation loss decreased (0.200642 --> 0.199776).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.2255324
+	speed: 0.0201s/iter; left time: 55.1780s
+	iters: 200, epoch: 6 | loss: 0.1902258
+	speed: 0.0200s/iter; left time: 52.9861s
+	iters: 300, epoch: 6 | loss: 0.2070160
+	speed: 0.0201s/iter; left time: 51.0637s
+	iters: 400, epoch: 6 | loss: 0.2321196
+	speed: 0.0201s/iter; left time: 49.0428s
+	iters: 500, epoch: 6 | loss: 0.2304695
+	speed: 0.0201s/iter; left time: 47.0760s
+Epoch: 6 cost time: 11.4s
+Epoch: 6, Steps: 569 | Train Loss: 0.2222395 Vali Loss: 0.1994985
+Validation loss decreased (0.199776 --> 0.199498).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.2003379
+	speed: 0.0200s/iter; left time: 43.5054s
+	iters: 200, epoch: 7 | loss: 0.2443219
+	speed: 0.0199s/iter; left time: 41.3703s
+	iters: 300, epoch: 7 | loss: 0.1995226
+	speed: 0.0200s/iter; left time: 39.5399s
+	iters: 400, epoch: 7 | loss: 0.2060411
+	speed: 0.0201s/iter; left time: 37.7634s
+	iters: 500, epoch: 7 | loss: 0.2401615
+	speed: 0.0202s/iter; left time: 35.9143s
+Epoch: 7 cost time: 11.5s
+Epoch: 7, Steps: 569 | Train Loss: 0.2219677 Vali Loss: 0.1991521
+Validation loss decreased (0.199498 --> 0.199152).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.2325318
+	speed: 0.0205s/iter; left time: 32.9815s
+	iters: 200, epoch: 8 | loss: 0.2250489
+	speed: 0.0205s/iter; left time: 30.9705s
+	iters: 300, epoch: 8 | loss: 0.2048211
+	speed: 0.0205s/iter; left time: 28.9109s
+	iters: 400, epoch: 8 | loss: 0.2148508
+	speed: 0.0205s/iter; left time: 26.8554s
+	iters: 500, epoch: 8 | loss: 0.2245795
+	speed: 0.0205s/iter; left time: 24.8045s
+Epoch: 8 cost time: 11.7s
+Epoch: 8, Steps: 569 | Train Loss: 0.2217625 Vali Loss: 0.1989969
+Validation loss decreased (0.199152 --> 0.198997).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.2315144
+	speed: 0.0206s/iter; left time: 21.4171s
+	iters: 200, epoch: 9 | loss: 0.2163188
+	speed: 0.0206s/iter; left time: 19.2996s
+	iters: 300, epoch: 9 | loss: 0.2209850
+	speed: 0.0205s/iter; left time: 17.2156s
+	iters: 400, epoch: 9 | loss: 0.2219726
+	speed: 0.0205s/iter; left time: 15.1528s
+	iters: 500, epoch: 9 | loss: 0.2114805
+	speed: 0.0205s/iter; left time: 13.0910s
+Epoch: 9 cost time: 11.7s
+Epoch: 9, Steps: 569 | Train Loss: 0.2217134 Vali Loss: 0.1990085
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.2106780
+	speed: 0.0202s/iter; left time: 9.4966s
+	iters: 200, epoch: 10 | loss: 0.2294648
+	speed: 0.0202s/iter; left time: 7.4768s
+	iters: 300, epoch: 10 | loss: 0.2158733
+	speed: 0.0202s/iter; left time: 5.4530s
+	iters: 400, epoch: 10 | loss: 0.2396904
+	speed: 0.0202s/iter; left time: 3.4359s
+	iters: 500, epoch: 10 | loss: 0.2310847
+	speed: 0.0202s/iter; left time: 1.4136s
+Epoch: 10 cost time: 11.5s
+Epoch: 10, Steps: 569 | Train Loss: 0.2216561 Vali Loss: 0.1989454
+Validation loss decreased (0.198997 --> 0.198945).  Saving model ...
+Updating learning rate to 1.953125e-06
+Training time: 133.2s | Peak GPU memory: 841.7MB
+
+>>> Testing...
+test 5165
+test shape: (5165, 1, 96, 321) (5165, 1, 96, 321)
+test shape: (5165, 96, 321) (5165, 96, 321)
+MSE: 0.220690, MAE: 0.314365
+Inference: 13.85s | 5165 samples | 373.0 samples/sec
+Results saved to /lustre09/project/6010289/sdmuhsin/SpectraGate/results/ecl_results.csv
+========================================
+Finished: Mon 09 Mar 2026 06:15:11 PM EDT
+========================================
