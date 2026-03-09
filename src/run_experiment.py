@@ -160,7 +160,7 @@ WEATHER_DEFAULTS = {
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
-        lradj='cosine',
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     # Table 4 models — standard TSLib defaults
     'FreTS': dict(
@@ -206,6 +206,11 @@ EXCHANGE_DEFAULTS = {
     'CompactFreq': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=10,
         dropout=0.3, cut_freq=24, rank=8,
+    ),
+    'SpectraGate': dict(
+        batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
+        dropout=0.1, cut_freq=12, d_model=64, d_ff=24,
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -266,8 +271,8 @@ ECL_DEFAULTS = {
     ),
     'SpectraGate': dict(
         batch_size=8, learning_rate=0.001, train_epochs=100, patience=15,
-        dropout=0.1, cut_freq=24, d_model=512, d_ff=128,
-        lradj='cosine',
+        dropout=0.1, cut_freq=24, d_model=192, d_ff=64,
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -312,7 +317,7 @@ ETTH1_DEFAULTS = {
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
-        lradj='cosine',
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -357,7 +362,7 @@ ETTH2_DEFAULTS = {
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
-        lradj='cosine',
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -417,7 +422,7 @@ ETTM1_DEFAULTS = {
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
         dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
-        lradj='cosine',
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -467,8 +472,8 @@ ETTM2_DEFAULTS = {
     ),
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
-        dropout=0.1, cut_freq=20, d_model=128, d_ff=64,
-        lradj='cosine',
+        dropout=0.1, cut_freq=20, d_model=96, d_ff=64,
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=32,
@@ -512,8 +517,8 @@ TRAFFIC_DEFAULTS = {
     ),
     'SpectraGate': dict(
         batch_size=8, learning_rate=0.001, train_epochs=100, patience=15,
-        dropout=0.1, cut_freq=24, d_model=512, d_ff=128,
-        lradj='cosine',
+        dropout=0.1, cut_freq=24, d_model=192, d_ff=64,
+        e_layers=1, d_layers=0, lradj='cosine',
     ),
     'FreTS': dict(
         embed_size=128, hidden_size=256, batch_size=16,

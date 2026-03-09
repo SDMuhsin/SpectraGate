@@ -82,14 +82,14 @@ models=(
 
 # Datasets to evaluate
 datasets=(
-    #"Weather"
-    #"Exchange"
-    #"ECL"
-    #"ETTh1"
-    #"ETTh2"
-    #"ETTm1"
+    "Weather"
+    "Exchange"
+    "ECL"
+    "ETTh1"
+    "ETTh2"
+    "ETTm1"
     "ETTm2"
-    #"Traffic"
+    "Traffic"
 )
 
 # Prediction lengths
@@ -164,6 +164,24 @@ build_python_cmd() {
 
     if [[ -n "$OUTPUT_CSV" ]]; then
         cmd+=" --output_csv $OUTPUT_CSV"
+    fi
+
+    # SpectraGate: explicit param-efficient configs (all e_layers=1, <75% of PaiFilter)
+    if [[ "$model" == "SpectraGate" ]]; then
+        case $dataset in
+            Weather|ETTh1|ETTh2|ETTm1)
+                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 20 --d_model 128 --d_ff 64"
+                ;;
+            ETTm2)
+                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 20 --d_model 96 --d_ff 64"
+                ;;
+            Exchange)
+                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 12 --d_model 64 --d_ff 24"
+                ;;
+            ECL|Traffic)
+                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 24 --d_model 192 --d_ff 64"
+                ;;
+        esac
     fi
 
     echo "$cmd"
