@@ -31,7 +31,7 @@ DATASET_CONFIGS = {
     'Weather': dict(
         enc_in=21, dec_in=21, c_out=21,
         data='custom',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'weather'),
+        root_path=lambda root: os.path.join(root, 'data', 'weather'),
         data_path='weather.csv',
         freq='h',
         target='OT',
@@ -40,7 +40,7 @@ DATASET_CONFIGS = {
     'Exchange': dict(
         enc_in=8, dec_in=8, c_out=8,
         data='custom',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'exchange_rate'),
+        root_path=lambda root: os.path.join(root, 'data', 'exchange_rate'),
         data_path='exchange_rate.csv',
         freq='d',
         target='OT',
@@ -49,7 +49,7 @@ DATASET_CONFIGS = {
     'ECL': dict(
         enc_in=321, dec_in=321, c_out=321,
         data='custom',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'electricity'),
+        root_path=lambda root: os.path.join(root, 'data', 'electricity'),
         data_path='electricity.csv',
         freq='h',
         target='OT',
@@ -58,7 +58,7 @@ DATASET_CONFIGS = {
     'ETTh1': dict(
         enc_in=7, dec_in=7, c_out=7,
         data='ETTh1',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'ETT-small'),
+        root_path=lambda root: os.path.join(root, 'data', 'ETT-small'),
         data_path='ETTh1.csv',
         freq='h',
         target='OT',
@@ -67,7 +67,7 @@ DATASET_CONFIGS = {
     'ETTh2': dict(
         enc_in=7, dec_in=7, c_out=7,
         data='ETTh2',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'ETT-small'),
+        root_path=lambda root: os.path.join(root, 'data', 'ETT-small'),
         data_path='ETTh2.csv',
         freq='h',
         target='OT',
@@ -76,7 +76,7 @@ DATASET_CONFIGS = {
     'ETTm1': dict(
         enc_in=7, dec_in=7, c_out=7,
         data='ETTm1',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'ETT-small'),
+        root_path=lambda root: os.path.join(root, 'data', 'ETT-small'),
         data_path='ETTm1.csv',
         freq='t',
         target='OT',
@@ -85,7 +85,7 @@ DATASET_CONFIGS = {
     'ETTm2': dict(
         enc_in=7, dec_in=7, c_out=7,
         data='ETTm2',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'ETT-small'),
+        root_path=lambda root: os.path.join(root, 'data', 'ETT-small'),
         data_path='ETTm2.csv',
         freq='t',
         target='OT',
@@ -94,7 +94,7 @@ DATASET_CONFIGS = {
     'Traffic': dict(
         enc_in=862, dec_in=862, c_out=862,
         data='custom',
-        root_path=lambda root: os.path.join(root, '..', 'dataset', 'traffic'),
+        root_path=lambda root: os.path.join(root, 'data', 'traffic'),
         data_path='traffic.csv',
         freq='h',
         target='OT',
