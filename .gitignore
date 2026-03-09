@@ -1,0 +1,7 @@
+**.pyc
+data/
+env
+checkpoints
+results/
+models
+llmdocs
