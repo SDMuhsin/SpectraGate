@@ -124,6 +124,13 @@ get_job_config() {
             ;;
     esac
 
+    # PatchTST on Traffic: channel-independent patching creates [B*862, patches, 512]
+    # pseudo-batch that can exceed 40GB at pred_len>=336. Use full H100.
+    if [[ "$model" == "PatchTST" && "$dataset" == "Traffic" ]]; then
+        gpu_type="h100:1"
+        mem="64000M"
+    fi
+
     # SpectraGate / CompactFreq train longer (100 epochs)
     case $model in
         SpectraGate|CompactFreq|SpectralMixer|SpectralAttn|FITS)
@@ -164,6 +171,11 @@ build_python_cmd() {
 
     if [[ -n "$OUTPUT_CSV" ]]; then
         cmd+=" --output_csv $OUTPUT_CSV"
+    fi
+
+    # PatchTST on Traffic: reduce batch_size to fit in memory at long pred_lens
+    if [[ "$model" == "PatchTST" && "$dataset" == "Traffic" ]]; then
+        cmd+=" --batch_size 12"
     fi
 
     # SpectraGate: explicit param-efficient configs (all e_layers=1, <75% of PaiFilter)
