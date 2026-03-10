@@ -61,39 +61,39 @@ done
 # Models to benchmark (comment/uncomment as needed)
 models=(
     # --- Table 1: Main baselines (9 models) ---
-    # "TexFilter"
-    # "PaiFilter"
-    # "iTransformer"
-    # "PatchTST"
-    # "FEDformer"
-    # "TimesNet"
-    # "DLinear"
-    # "RLinear"
-    # "FITS"
+    "TexFilter"
+    "PaiFilter"
+    "iTransformer"
+    "PatchTST"
+    "FEDformer"
+    "TimesNet"
+    "DLinear"
+    "RLinear"
+    "FITS"
     # --- Table 4: Additional baselines (5 models) ---
-    # "FreTS"
-    # "Autoformer"
-    # "Informer"
-    # "Pyraformer"
-    # "MICN"
+    "FreTS"
+    "Autoformer"
+    "Informer"
+    "Pyraformer"
+    "MICN"
     # --- Ours ---
     "SpectraGate"
 )
 
 # Datasets to evaluate
 datasets=(
-    # "Weather"
+    "Weather"
     "Exchange"
-    # "ECL"
-    # "ETTh1"
-    # "ETTh2"
-    # "ETTm1"
-    # "ETTm2"
-    # "Traffic"
+    "ECL"
+    "ETTh1"
+    "ETTh2"
+    "ETTm1"
+    "ETTm2"
+    "Traffic"
 )
 
 # Prediction lengths
-pred_lens=(96) # 192 336 720)
+pred_lens=(336) #96  192 336 720)
 
 # ============================================================================
 # SLURM RESOURCE CONFIGURATION
