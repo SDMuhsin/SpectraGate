@@ -209,7 +209,7 @@ EXCHANGE_DEFAULTS = {
     ),
     'SpectraGate': dict(
         batch_size=32, learning_rate=0.001, train_epochs=100, patience=15,
-        dropout=0.1, cut_freq=12, d_model=64, d_ff=24,
+        dropout=0.1, cut_freq=12, d_model=50, d_ff=24,
         e_layers=1, d_layers=0, lradj='cosine',
     ),
     'DLinear': dict(

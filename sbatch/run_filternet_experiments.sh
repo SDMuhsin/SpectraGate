@@ -61,35 +61,35 @@ done
 # Models to benchmark (comment/uncomment as needed)
 models=(
     # --- Table 1: Main baselines (9 models) ---
-    "TexFilter"
-    "PaiFilter"
-    "iTransformer"
-    "PatchTST"
-    "FEDformer"
-    "TimesNet"
-    "DLinear"
-    "RLinear"
-    "FITS"
+    # "TexFilter"
+    # "PaiFilter"
+    # "iTransformer"
+    # "PatchTST"
+    # "FEDformer"
+    # "TimesNet"
+    # "DLinear"
+    # "RLinear"
+    # "FITS"
     # --- Table 4: Additional baselines (5 models) ---
-    "FreTS"
-    "Autoformer"
-    "Informer"
-    "Pyraformer"
-    "MICN"
+    # "FreTS"
+    # "Autoformer"
+    # "Informer"
+    # "Pyraformer"
+    # "MICN"
     # --- Ours ---
     "SpectraGate"
 )
 
 # Datasets to evaluate
 datasets=(
-    "Weather"
+    # "Weather"
     "Exchange"
-    "ECL"
-    "ETTh1"
-    "ETTh2"
-    "ETTm1"
-    "ETTm2"
-    "Traffic"
+    # "ECL"
+    # "ETTh1"
+    # "ETTh2"
+    # "ETTm1"
+    # "ETTm2"
+    # "Traffic"
 )
 
 # Prediction lengths
@@ -176,7 +176,7 @@ build_python_cmd() {
                 cmd+=" --e_layers 1 --d_layers 0 --cut_freq 20 --d_model 96 --d_ff 64"
                 ;;
             Exchange)
-                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 12 --d_model 64 --d_ff 24"
+                cmd+=" --e_layers 1 --d_layers 0 --cut_freq 12 --d_model 50 --d_ff 24"
                 ;;
             ECL|Traffic)
                 cmd+=" --e_layers 1 --d_layers 0 --cut_freq 24 --d_model 192 --d_ff 64"
