@@ -1,7 +1,29 @@
 **.pyc
+__pycache__/
 data/
-env
-checkpoints
+env/
+checkpoints/
 results/
 logs/
-llmdocs
+
+# LLM-generated research artifacts
+llmdocs/
+src/architecture_diagram.py
+src/analyze_weather_structure.py
+src/analyze_nonstationarity.py
+src/test_channel_compression.py
+src/test_spectral_truncation.py
+src/spectral_analysis_ecl.py
+src/svd_analysis_ecl.py
+src/ecl_freq_correlation.py
+src/weather_freq_correlation.py
+src/phase3c_experiment.py
+src/phase3c_spectral_variability.py
+src/run_batch.sh
+src/run.py
+
+# Intermediate research models
+models/CompactFreq.py
+models/CompactFreq_v2.py
+models/SpectralMixer.py
+models/SpectralAttn.py
